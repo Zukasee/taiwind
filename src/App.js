@@ -1,25 +1,29 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import s from './App.module.scss';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+   const [email, setEmail] = useState('');
+   const [password, setPassword] = useState('');
+
+   return (
+      <div className={s.main}>
+         <h1 className={s.head}>Hello tailwind</h1>
+         <div>
+            <input
+               placeholder="Email"
+               value={email}
+               onChange={(e) => setEmail(e.target.value)}
+            />
+            <input
+               placeholder="Password"
+               value={password}
+               onChange={(e) => setPassword(e.target.value)}
+            />
+            <button className={s.button}>Login</button>
+         </div>
+      </div>
+   );
 }
 
 export default App;

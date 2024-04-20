@@ -1,0 +1,23 @@
+.main {
+    @apply m-8 mt-0;
+
+    .head {
+        @apply text-xl font-bold text-center text-white my-6;
+    }
+    
+    >div {
+        @apply shadow-xl rounded-sm overflow-hidden m-0.5;
+
+        input {
+            @apply block w-full bg-white bg-opacity-10 border-r-2
+            border-transparent focus:border-slate-400 py-3 px-4
+            placeholder:text-slate-500 outline-none text-slate-50
+            transition-colors;
+        }
+    
+        .button {
+            @apply bg-orange-500 text-white block py-2.5 w-full
+            transition-colors hover:bg-orange-600 font-bold text-lg;
+        }
+    }
+}
